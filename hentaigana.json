@@ -1,0 +1,75 @@
+{
+    "candidates": [ "a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "hu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "wi", "we", "wo", "n" ],
+    "characters": [
+        {
+            "filename": "a1.png",
+            "type": "hentaigana",
+            "answers": [ "a" ]
+        },
+        {
+            "filename": "a2.png",
+            "type": "hentaigana",
+            "answers": [ "a" ]
+        },
+        {
+            "filename": "a3.png",
+            "type": "hentaigana",
+            "answers": [ "a" ]
+        },
+        {
+            "filename": "a4.png",
+            "type": "hentaigana",
+            "answers": [ "a" ]
+        },
+        {
+            "filename": "a5.png",
+            "type": "hentaigana",
+            "answers": [ "a" ]
+        },
+        {
+            "filename": "awo.png",
+            "type": "hentaigana",
+            "answers": [ "a", "wo" ]
+        },
+        {
+            "filename": "i1.png",
+            "type": "hentaigana",
+            "answers": [ "i" ]
+        },
+        {
+            "filename": "i2.png",
+            "type": "hentaigana",
+            "answers": [ "i" ]
+        },
+        {
+            "filename": "i3.png",
+            "type": "hentaigana",
+            "answers": [ "i" ]
+        },
+        {
+            "filename": "i4.png",
+            "type": "hentaigana",
+            "answers": [ "i" ]
+        },
+        {
+            "filename": "i5.png",
+            "type": "hentaigana",
+            "answers": [ "i" ]
+        },
+        {
+            "filename": "u8.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "ka1.png",
+            "type": "hentaigana",
+            "answers": [ "ka" ]
+        },
+        {
+            "filename": "ko6.png",
+            "type": "hentaigana",
+            "answers": [ "ko" ]
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HodokuKana</title>
+    <%- include('style.ejs') %>
+</head>
+<body>
+    <audio controls style="display: none;">
+        <source src="/push-and-shove.mp3" type="audio/mpeg">
+    </audio>
+    <audio controls style="display: none;">
+        <source src="/push-and-shove.mp3" type="audio/mpeg">
+    </audio>
+    <div id="main" style="display: none;">
+        <div class="container" style="height: 100%;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100%;">
+                <div class="inner">
+                    <div class="item"><div class="char"><img id="fig" src=""></div></div>
+                    <div class="divider"></div>
+                    <div id="items"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scoreboard"><span id="solved">-</span>/<span>20</span></div>
+        <div id="result" style="display: none;"></div>
+        <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </div>
+    <a><button id="start" onclick="start();">開始</button></a>
+    <script>
+        var socket;
+        var info = '';
+        function start() {
+            $('#start').hide();
+            $('#main').show();
+            socket = io();
+            socket.on('updt', function (data) {
+                $('#result').hide();
+                info = data.info;
+                $('#solved').html(data.solved);
+                $('#fig').attr('src', `data:image/png;base64,${btoa(String.fromCharCode.apply(null, new Uint8Array(data.fig)))}`);
+                $('#items').empty();
+                for (const i in data.choice) {
+                    $('#items').append(`<div class="item"><a id="${$('#items').children().length}"><button class="pro">${data.choice[i]}</button></a></div>`);
+                }
+                $('.pro').on('click', function () {
+                    $('.pro').off('click');
+                    const val = $(this).html();
+                    socket.emit('chose', {
+                        info: data.info,
+                        answer: val
+                    });
+                });
+            });
+            socket.on('rslt', function (data) {
+                $('#result').html(data.msg);
+                $('#result').css('background-color', `#${data.color}`);
+                $('#result').show();
+            });
+            playforever($('audio')[0], $('audio')[1]);
+        }
+        function playforever(audio1, audio2) {
+            audio1.play();
+            setTimeout(function () {
+                playforever(audio2, audio1);
+            }, 3940);
+        }
+    </script>
+</body>
+</html>
