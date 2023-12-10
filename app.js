@@ -20,7 +20,7 @@ app.get('/start', function (req, res) {
     return res.render('start');
 });
 
-http.listen(3000, function () {
+http.listen(config.port, function () {
     console.log('Server on');
 });
 

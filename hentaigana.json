@@ -57,9 +57,99 @@
             "answers": [ "i" ]
         },
         {
+            "filename": "u1.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u2.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u3.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u4.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u5.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u6.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "u7.png",
+            "type": "hentaigana",
+            "answers": [ "u" ]
+        },
+        {
+            "filename": "uha.png",
+            "type": "hentaigana",
+            "answers": [ "u", "ha" ]
+        },
+        {
             "filename": "u8.png",
             "type": "hentaigana",
             "answers": [ "u" ]
+        },
+        {
+            "filename": "e1.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e2.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e3.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e4.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e5.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e6.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "e7.png",
+            "type": "hentaigana",
+            "answers": [ "e" ]
+        },
+        {
+            "filename": "o1.png",
+            "type": "hentaigana",
+            "answers": [ "o" ]
+        },
+        {
+            "filename": "o2.png",
+            "type": "hentaigana",
+            "answers": [ "o" ]
+        },
+        {
+            "filename": "o3.png",
+            "type": "hentaigana",
+            "answers": [ "o" ]
         },
         {
             "filename": "ka1.png",
