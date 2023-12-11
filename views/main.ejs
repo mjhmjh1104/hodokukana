@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="scoreboard"><span id="solved">-</span>/<span>20</span></div>
+        <div class="scoreboard"><span id="solved">-</span> / <span id="total">-</span></div>
         <div id="result" style="display: none;"></div>
         <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
@@ -40,6 +40,7 @@
                 $('#result').hide();
                 info = data.info;
                 $('#solved').html(data.solved);
+                $('#total').html(data.total);
                 $('#fig').attr('src', `data:image/png;base64,${btoa(String.fromCharCode.apply(null, new Uint8Array(data.fig)))}`);
                 $('#items').empty();
                 for (const i in data.choice) {

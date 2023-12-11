@@ -38,7 +38,7 @@ io.on('connection', function (socket) {
                     msg: '正しい'
                 });
                 setTimeout(function () {
-                    update(socket, dec.solved + 1);
+                    update(socket, dec.solved + 1, dec.total + 1);
                 }, 1000);
             } else {
                 socket.emit('rslt', {
@@ -46,14 +46,14 @@ io.on('connection', function (socket) {
                     msg: `違う; 正解: ${answers.join(', ')}`
                 });
                 setTimeout(function () {
-                    update(socket, dec.solved);
+                    update(socket, dec.solved, dec.total + 1);
                 }, 1000);
             }
         } catch (e) {
             console.log(e);
         }
     });
-    update(socket, 0);
+    update(socket, 0, 0);
 });
 
 function random(x) {
@@ -91,13 +91,14 @@ function invalid(idx, choice) {
     return false;
 }
 
-async function update(socket, solved) {
+async function update(socket, solved, total) {
     var idx = random(hentaigana.characters.length);
     const figure = await fs.readFile(path.join(__dirname, 'images/' + hentaigana.characters[idx].filename));
     const encrypted = encode(JSON.stringify({
         salt: config.salt + crypto.randomBytes(16),
         idx: idx,
-        solved: solved
+        solved: solved,
+        total: total
     }));
     var choice = [ ];
     while (invalid(idx, choice)) {
@@ -110,6 +111,7 @@ async function update(socket, solved) {
         fig: figure,
         choice: choice,
         info: encrypted,
-        solved: solved
+        solved: solved,
+        total: total
     });
 }
